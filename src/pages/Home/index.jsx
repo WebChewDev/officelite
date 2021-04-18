@@ -1,10 +1,16 @@
 import React from "react";
+import Features from "../../layouts/Features/index";
+import Header from "../../layouts/Header/index";
+import { HeaderContainer, BackgroundImage } from "./HomeElements";
+import BgSvg from "../../assets/home/bg-pattern-header.svg";
 
 function Home() {
   return (
-    <div>
-      <h1>Home Page</h1>
-    </div>
+    <HeaderContainer>
+      {/* <BackgroundImage src={BgSvg} alt="Background" /> */}
+      <Header />
+      <Features />
+    </HeaderContainer>
   );
 }
 
