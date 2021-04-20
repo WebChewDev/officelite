@@ -1,6 +1,7 @@
 import React from "react";
 import logo from "../../assets/shared/logo.svg";
 import heroImage from "../../assets/home/illustration-charts.svg";
+import Button from "../../components/Button/index";
 import { heading, subheading, cta_btn } from "./content";
 
 import {
@@ -13,8 +14,6 @@ import {
   Heading,
   SubText,
   Anchor,
-  Btn,
-  BtnText,
 } from "./HeaderElements";
 
 function Header() {
@@ -33,9 +32,7 @@ function Header() {
         <SubText>{subheading}</SubText>
 
         <Anchor to="/">
-          <Btn>
-            <BtnText>{cta_btn}</BtnText>
-          </Btn>
+          <Button text={cta_btn} />
         </Anchor>
       </CallToAction>
     </HeaderContainer>

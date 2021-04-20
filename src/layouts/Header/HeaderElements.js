@@ -1,27 +1,45 @@
 import styled from "styled-components";
 import { Link } from "react-router-dom";
+import bg from "../../assets/home/bg-pattern-header.svg";
 
 export const HeaderContainer = styled.header`
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
   min-height: 890px;
-  width: 100%;
-  padding: 46px 24px 100px;y
-  background: url("../../assets/home/bg-pattern-header.svg");
+  width: 375px;
+  padding: 46px 24px 100px;
+  background: url(${bg}) center -47% no-repeat;
+  background-size: 489px 489px;
+  /* background-position: -42px -170px; */
+`;
+
+export const BgSvg = styled.img`
+  position: absolute;
+  width: 458px;
+  height: 458px;
+  left: -42px;
+  top: -170px;
 `;
 
 export const HeroImage = styled.div`
-  width: 171px;
+  /* width: 171px;
   height: 192px;
   margin-top: 80px;
-  object-fit: contain;
+  object-fit: contain; */
+
+  position: absolute;
+  width: 171px;
+  height: 192px;
+  left: 102px;
+  top: 162px;
 `;
 
 export const Image = styled.img`
-  height: 100%;
-  width: 100%;
+  max-width: 100%;
+  max-height: 100%;
 `;
 
 export const Logo = styled(Link)`
@@ -43,6 +61,7 @@ export const BrandLogo = styled.img`
 `;
 
 export const CallToAction = styled.div`
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -58,7 +77,7 @@ export const Heading = styled.h1`
   font-size: 40px;
   line-height: 48px;
   width: 332px;
-  margin: 0 0 24px 0;
+  margin: 0 0 27px 0;
   text-align: center;
 `;
 
@@ -78,22 +97,4 @@ export const Anchor = styled(Link)`
   height: 100%;
   width: 100%;
   text-decoration: none;
-`;
-
-export const Btn = styled.button`
-  height: 56px;
-  width: 171px;
-  background: #5175ff;
-  box-shadow: 0px 25px 25px -10px rgba(63, 91, 194, 0.247159);
-  border-radius: 28px;
-  border: none;
-  cursor: pointer;
-`;
-
-export const BtnText = styled.span`
-  font-style: normal;
-  font-weight: bold;
-  font-size: 16px;
-  line-height: 28px;
-  color: #ffffff;
 `;

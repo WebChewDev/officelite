@@ -1,7 +1,10 @@
 import styled from "styled-components";
 import { Link } from "react-router-dom";
+import cardBg from "../../assets/home/bg-pattern-pricing.svg";
 
 export const CardContainer = styled.div`
+  z-index: 10;
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -9,12 +12,14 @@ export const CardContainer = styled.div`
   height: 508px;
   width: 350px;
   margin: 0 0 32px;
-  background: #ffffff;
   box-shadow: 0px 50px 50px -25px rgba(75, 92, 154, 0.247159);
   border-radius: 13px;
-  background: url("../../assets/sign-up/icon-cross.svg");
+  background: #ffffff;
+
   &:nth-child(2) {
-    background-color: pink;
+    color: #ffffff;
+    background: #5175ff no-repeat url(${cardBg}) center 102%;
+    background-size: 880px 880px;
   }
 `;
 
@@ -33,6 +38,9 @@ export const Pricing = styled.p`
   font-size: 56px;
   line-height: 64px;
   color: #333950;
+
+  &:nth-child(2) {
+  }
 `;
 
 export const SubHeading = styled.h2`
@@ -42,7 +50,7 @@ export const SubHeading = styled.h2`
   font-size: 16px;
   line-height: 28px;
   text-align: center;
-  color: #333950;
+  /* color: #333950; */
 `;
 
 export const Subtext = styled.p`
@@ -53,6 +61,7 @@ export const Subtext = styled.p`
   line-height: 28px;
   text-align: center;
   color: #747b95;
+
   &.last {
     margin: 0 0 32px 0%;
   }

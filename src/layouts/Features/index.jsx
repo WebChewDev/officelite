@@ -1,6 +1,6 @@
 import React from "react";
 import Cards from "../../components/Cards/index";
-import { FeaturesContainer } from "./FeaturesElements";
+import { FeaturesContainer, BgSvg } from "./FeaturesElements";
 import {
   heading,
   pricing,
@@ -24,7 +24,6 @@ function Features() {
         btn_text={btn}
       />
       <Cards
-        className="middle"
         heading={heading[1]}
         pricing={pricing[1]}
         subheading={subheading[1]}
