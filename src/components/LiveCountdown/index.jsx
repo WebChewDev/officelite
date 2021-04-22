@@ -1,44 +1,68 @@
 import React, { useEffect, useState } from "react";
+// import { DateTime } from "luxon";
+
 import {
   Container,
   Title,
-  Count,
+  HighlightedDate,
   CellContainer,
   Cell,
-  Time,
-  Day,
+  CellValue,
+  CellText,
 } from "./LiveCountdownElements";
 import Button from "../Button/index";
+import { minutes } from "./helpers";
 
 function LiveCountdown() {
-  const [date, setDate] = useState(1);
+  const [Seconds, setSeconds] = useState("");
+  const [Minutes, setMinutes] = useState("");
+  const [Hours, setHours] = useState("");
+  const [Days, setDays] = useState("");
 
   useEffect(() => {
-    setTimeout(() => setDate(date + 1), 1000);
+    setInterval(function () {
+      const countDownDate = new Date("Jul 25, 2021 16:37:52").getTime();
+      var now = new Date().getTime();
+      var timeLeft = countDownDate - now;
+
+      var days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+      var hours = Math.floor(
+        (timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+      );
+      var minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+      var seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+
+      //state
+      setSeconds(seconds)
+      setMinutes(minutes)
+      setHours(hours)
+      setDays(days)
+
+    }, 1000);
   });
 
   return (
     <Container>
       <Title>
         Coming
-        <Count>{date}</Count>
+        <HighlightedDate> 4 April 2020</HighlightedDate>
       </Title>
       <CellContainer>
         <Cell>
-          <Time>{12}</Time>
-          <Day>days</Day>
+          <CellValue>{Days}</CellValue>
+          <CellText>day</CellText>
         </Cell>
         <Cell>
-          <Time>{45}</Time>
-          <Day>hours</Day>
+          <CellValue>{Hours}</CellValue>
+          <CellText>hour</CellText>
         </Cell>
         <Cell>
-          <Time>{22}</Time>
-          <Day>mins</Day>
+          <CellValue>{Minutes}</CellValue>
+          <CellText>min</CellText>
         </Cell>
         <Cell>
-          <Time>{34}</Time>
-          <Day>secs</Day>
+          <CellValue>{Seconds}</CellValue>
+          <CellText>sec</CellText>
         </Cell>
       </CellContainer>
       <Button text="Get Started" />

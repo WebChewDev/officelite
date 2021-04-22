@@ -29,7 +29,7 @@ export const Title = styled.h3`
   text-transform: uppercase;
 `;
 
-export const Count = styled.span`
+export const HighlightedDate = styled.span`
   color: #5175ff;
 `;
 
@@ -53,7 +53,7 @@ export const Cell = styled.div`
   border-radius: 4px;
   background: #333950;
 `;
-export const Time = styled.span`
+export const CellValue = styled.span`
   font-style: normal;
   font-weight: bold;
   font-size: 32px;
@@ -64,7 +64,7 @@ export const Time = styled.span`
   color: #ffffff;
   text-align: center;
 `;
-export const Day = styled.div`
+export const CellText = styled.div`
   font-style: normal;
   font-weight: bold;
   font-size: 12px;
@@ -74,4 +74,5 @@ export const Day = styled.div`
   height: 28px;
   color: #999ca7;
   text-align: center;
+  margin: -2px 0 0 0;
 `;
