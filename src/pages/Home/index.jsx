@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import Features from "../../layouts/Features/index";
 import Header from "../../layouts/Header/index";
 import Footer from "../../layouts/Footer/index";

@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
-// import { DateTime } from "luxon";
-
+import Button from "../Button/index";
 import {
   Container,
   Title,
@@ -10,8 +9,6 @@ import {
   CellValue,
   CellText,
 } from "./LiveCountdownElements";
-import Button from "../Button/index";
-import { minutes } from "./helpers";
 
 function LiveCountdown() {
   const [Seconds, setSeconds] = useState("");
@@ -19,9 +16,10 @@ function LiveCountdown() {
   const [Hours, setHours] = useState("");
   const [Days, setDays] = useState("");
 
+  const countDownDate = new Date("Jul 25, 2021 16:37:52").getTime();
+
   useEffect(() => {
     setInterval(function () {
-      const countDownDate = new Date("Jul 25, 2021 16:37:52").getTime();
       var now = new Date().getTime();
       var timeLeft = countDownDate - now;
 
@@ -33,19 +31,17 @@ function LiveCountdown() {
       var seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
 
       //state
-      setSeconds(seconds)
-      setMinutes(minutes)
-      setHours(hours)
-      setDays(days)
-
+      setSeconds(seconds);
+      setMinutes(minutes);
+      setHours(hours);
+      setDays(days);
     }, 1000);
   });
 
   return (
     <Container>
       <Title>
-        Coming
-        <HighlightedDate> 4 April 2020</HighlightedDate>
+        Coming <HighlightedDate>Jul 25 2021</HighlightedDate>
       </Title>
       <CellContainer>
         <Cell>

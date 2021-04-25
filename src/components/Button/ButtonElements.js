@@ -1,6 +1,5 @@
 import styled from "styled-components";
 
-
 export const Btn = styled.button`
   height: 56px;
   width: 171px;
@@ -10,6 +9,8 @@ export const Btn = styled.button`
   border: none;
   cursor: pointer;
 `;
+
+
 
 export const BtnText = styled.span`
   font-style: normal;

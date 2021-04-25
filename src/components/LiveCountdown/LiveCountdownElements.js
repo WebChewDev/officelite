@@ -16,7 +16,7 @@ export const Title = styled.h3`
   justify-content: center;
   align-items: center;
   height: 48px;
-  width: 248px;
+  width: 270px;
   margin: 0 0 18px 0;
 
   font-style: normal;
@@ -27,9 +27,11 @@ export const Title = styled.h3`
   text-align: center;
   letter-spacing: 5px;
   text-transform: uppercase;
+  color: #ffffff;
 `;
 
 export const HighlightedDate = styled.span`
+  margin: 0 0 0 8px;
   color: #5175ff;
 `;
 
@@ -40,7 +42,7 @@ export const CellContainer = styled.div`
   align-items: center;
   width: 328px;
   height: 92px;
-  margin: 0 0 40px 0
+  margin: 0 0 40px 0;
 `;
 export const Cell = styled.div`
   display: flex;

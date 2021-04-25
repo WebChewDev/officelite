@@ -1,10 +1,12 @@
 import React from "react";
+import Form from "../../components/SignupForm/index";
+import { Container } from "./SignUpElements";
 
 function SignUp() {
   return (
-    <div>
-      <h1>Sign up</h1>
-    </div>
+    <Container>
+      <Form />
+    </Container>
   );
 }
 
