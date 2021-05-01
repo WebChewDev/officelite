@@ -1,14 +1,63 @@
 import React from "react";
-import { Btn, BtnText } from "./ButtonElements";
+import {
+  // Text
+  Text,
+  // Button
+  BtnPrimary,
+  BtnSecondary,
+  BtnContrast,
+  BtnForm,
+  BtnCta,
+} from "./ButtonElements";
 
-function Button({ text, click, ...props }) {
+export const ButtonPrimary = ({ text, ...props }) => {
   return (
     <>
-      <Btn onClick={click} {...props}>
-        <BtnText>{text}</BtnText>
-      </Btn>
+      <BtnPrimary {...props}>
+        <Text>{text}</Text>
+      </BtnPrimary>
     </>
   );
-}
+};
 
-export default Button;
+export const ButtonSecondary = ({ text, ...props }) => {
+  return (
+    <>
+      <BtnSecondary {...props}>
+        <Text>{text}</Text>
+      </BtnSecondary>
+    </>
+  );
+};
+
+export const ButtonContrast = ({ text, ...props }) => {
+  return (
+    <>
+      <BtnContrast {...props}>
+        <Text>{text}</Text>
+      </BtnContrast>
+    </>
+  );
+};
+
+export const ButtonCta = ({ text, ...props }) => {
+  return (
+    <>
+      <BtnCta {...props}>
+        <Text>{text}</Text>
+      </BtnCta>
+    </>
+  );
+};
+
+export const ButtonForm = ({ text, ...props }) => {
+  return (
+    <>
+      <BtnForm {...props}>
+        <Text>{text}</Text>
+      </BtnForm>
+    </>
+  );
+};
+
+// export default Button;

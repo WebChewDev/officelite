@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
-import Button from "../Button/index";
 import {
   Container,
   Title,
+  TitleDark,
   HighlightedDate,
   CellContainer,
   Cell,
@@ -10,7 +10,7 @@ import {
   CellText,
 } from "./LiveCountdownElements";
 
-function LiveCountdown() {
+function LiveCountdown({ noBtn, dark }) {
   const [Seconds, setSeconds] = useState("");
   const [Minutes, setMinutes] = useState("");
   const [Hours, setHours] = useState("");
@@ -40,9 +40,15 @@ function LiveCountdown() {
 
   return (
     <Container>
-      <Title>
-        Coming <HighlightedDate>Jul 25 2021</HighlightedDate>
-      </Title>
+      {dark ? (
+        <TitleDark>
+          Coming <HighlightedDate>Jul 25 2021</HighlightedDate>
+        </TitleDark>
+      ) : (
+        <Title>
+          Coming <HighlightedDate>Jul 25 2021</HighlightedDate>
+        </Title>
+      )}
       <CellContainer>
         <Cell>
           <CellValue>{Days}</CellValue>
@@ -61,7 +67,6 @@ function LiveCountdown() {
           <CellText>sec</CellText>
         </Cell>
       </CellContainer>
-      <Button text="Get Started" />
     </Container>
   );
 }

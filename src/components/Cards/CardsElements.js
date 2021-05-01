@@ -31,6 +31,11 @@ export const Heading = styled.h1`
   line-height: 28px;
   color: #333950;
 `;
+
+export const HeadingDark = styled(Heading)`
+  color: #ffffff;
+`;
+
 export const Pricing = styled.p`
   margin: 0 0 8px 0;
   font-style: normal;
@@ -43,6 +48,10 @@ export const Pricing = styled.p`
   }
 `;
 
+export const PricingDark = styled(Pricing)`
+  color: #ffffff;
+`;
+
 export const SubHeading = styled.h2`
   margin: 0 0 56px 0;
   font-style: normal;
@@ -53,7 +62,7 @@ export const SubHeading = styled.h2`
   /* color: #333950; */
 `;
 
-export const Subtext = styled.p`
+export const SubText = styled.p`
   margin: 0 0 16px 0%;
   font-style: normal;
   font-weight: normal;
@@ -65,6 +74,10 @@ export const Subtext = styled.p`
   &.last {
     margin: 0 0 32px 0%;
   }
+`;
+
+export const SubTextDark = styled(SubText)`
+  color: #d3ddff;
 `;
 
 export const Anchor = styled(Link)`

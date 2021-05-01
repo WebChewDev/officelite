@@ -1,7 +1,7 @@
 import React from "react";
 import logo from "../../assets/shared/logo.svg";
 import heroImage from "../../assets/home/illustration-charts.svg";
-import Button from "../../components/Button/index";
+import { ButtonCta } from "../../components/Button/index";
 import { heading, subheading, cta_btn } from "./content";
 
 import {
@@ -16,24 +16,26 @@ import {
   Anchor,
 } from "./HeaderElements";
 
-function Header() {
+function Header({ image, btn }) {
   return (
     <HeaderContainer>
       <Logo to="/">
         <BrandLogo src={logo} />
       </Logo>
 
-      <HeroImage>
-        <Image src={heroImage} />
-      </HeroImage>
+      {image ? (
+        <HeroImage>
+          <Image src={heroImage} />
+        </HeroImage>
+      ) : null}
 
       <CallToAction>
         <Heading>{heading}</Heading>
         <SubText>{subheading}</SubText>
 
-        <Anchor to="/">
-          <Button text={cta_btn} />
-        </Anchor>
+        { btn? <Anchor to="/">
+          <ButtonCta text={cta_btn} />
+        </Anchor> : null}
       </CallToAction>
     </HeaderContainer>
   );

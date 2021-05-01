@@ -8,10 +8,11 @@ export const Container = styled.div`
   justify-content: center;
   align-items: center;
   overflow: hidden;
-  background: #FAFAFA
+  background: #fafafa;
 `;
 
 export const BgContainer = styled.div`
+  z-index: 0;
   position: absolute;
   width: 100%;
   height: 1248px;

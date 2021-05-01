@@ -3,12 +3,11 @@ import styled from "styled-components";
 export const Container = styled.div`
   display: flex;
   flex-direction: column;
-
   align-items: center;
   z-index: 15;
-  margin: 0 0 100px 0;
+  /* margin: 0 0 100px 0; */
   width: 328px;
-  height: 254px;
+  height: 158px;
 `;
 
 export const Title = styled.h3`
@@ -23,12 +22,15 @@ export const Title = styled.h3`
   font-weight: bold;
   font-size: 16px;
   line-height: 48px;
-
   text-align: center;
   letter-spacing: 5px;
   text-transform: uppercase;
   color: #ffffff;
 `;
+
+export const TitleDark = styled(Title)`
+    color: black;
+`
 
 export const HighlightedDate = styled.span`
   margin: 0 0 0 8px;
@@ -42,7 +44,6 @@ export const CellContainer = styled.div`
   align-items: center;
   width: 328px;
   height: 92px;
-  margin: 0 0 40px 0;
 `;
 export const Cell = styled.div`
   display: flex;

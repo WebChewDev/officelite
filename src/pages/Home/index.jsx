@@ -8,7 +8,7 @@ import { Container, BgContainer, BgImage } from "./HomeElements";
 function Home() {
   return (
     <Container>
-      <Header />
+      <Header image btn/>
       <Features />
       <Footer />
       <BgContainer>

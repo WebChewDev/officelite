@@ -1,13 +1,20 @@
 import React from "react";
+
+import {
+  ButtonPrimary,
+  ButtonSecondary,
+  ButtonContrast,
+} from "../Button/index";
 import {
   CardContainer,
   Heading,
+  HeadingDark,
   Pricing,
+  PricingDark,
   SubHeading,
-  Subtext,
+  SubText,
+  SubTextDark,
   Anchor,
-  Btn,
-  BtnText,
 } from "./CardsElements";
 
 function Cards({
@@ -17,22 +24,60 @@ function Cards({
   subtext_1,
   subtext_2,
   subtext_3,
+  subTextType,
   btn_text,
+  buttonType,
+  headingType,
+  pricingType,
 }) {
+  // button styles
+  let button;
+  if (buttonType === "primary") {
+    button = <ButtonPrimary text={btn_text} />;
+  } else if (buttonType === "secondary") {
+    button = <ButtonSecondary text={btn_text} />;
+  } else if (buttonType === "contrast") {
+    button = <ButtonContrast text={btn_text} />;
+  }
+
+  // subtext styles
+  let subText;
+  if (subTextType === "dark") {
+    subText = (
+      <>
+        <SubTextDark>{subtext_1}</SubTextDark>
+        <SubTextDark>{subtext_2}</SubTextDark>
+        <SubTextDark>{subtext_3}</SubTextDark>
+      </>
+    );
+  } else {
+    subText = (
+      <>
+        <SubText>{subtext_1}</SubText>
+        <SubText>{subtext_2}</SubText>
+        <SubText>{subtext_3}</SubText>
+      </>
+    );
+  }
+
   return (
     <>
       <CardContainer>
-        <Heading>{heading}</Heading>
-        <Pricing>{pricing}</Pricing>
+        {/* Heading */}
+        {headingType === 'dark' ? (
+          <HeadingDark>{heading}</HeadingDark>
+        ) : (
+          <Heading>{heading}</Heading>
+        )}
+        {/* Pricing */}
+        {pricingType === 'dark' ? (
+          <PricingDark>{pricing}</PricingDark>
+        ) : (
+          <Pricing>{pricing}</Pricing>
+        )}
         <SubHeading>{subheading}</SubHeading>
-        <Subtext>{subtext_1}</Subtext>
-        <Subtext>{subtext_2}</Subtext>
-        <Subtext className="last">{subtext_3}</Subtext>
-        <Anchor>
-          <Btn>
-            <BtnText>{btn_text}</BtnText>
-          </Btn>
-        </Anchor>
+        {subText}
+        <Anchor>{button}</Anchor>
       </CardContainer>
     </>
   );

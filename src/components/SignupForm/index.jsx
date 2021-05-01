@@ -2,7 +2,7 @@ import React from "react";
 import { validationSchema } from "./validation";
 import { useFormik } from "formik";
 import { FormControl, InputField } from "./FormElements";
-import Button from "../Button/index";
+import { ButtonForm } from "../Button/index";
 
 function Form() {
   const formik = useFormik({
@@ -27,7 +27,7 @@ function Form() {
       <InputField
         id="email"
         name="email"
-        placeholder="Email Address"
+        placeholder={formik.errors.email ? "Required" : "Email Address"}
         type="email"
         onChange={formik.handleChange}
         value={formik.values.email}
@@ -56,7 +56,7 @@ function Form() {
         onChange={formik.handleChange}
         value={formik.values.company}
       />
-      <Button text="Get on the list" />
+      <ButtonForm text="Get on the list" />
     </FormControl>
   );
 }

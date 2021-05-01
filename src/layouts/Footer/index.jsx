@@ -1,11 +1,14 @@
 import React from "react";
-import { FooterContainer } from "./FooterElements";
+import { FooterContainer, Wrapper, FooterBtn } from "./FooterElements";
 import LiveCountdown from "../../components/LiveCountdown/index";
-
+// container for live countdown
 function Footer() {
   return (
     <FooterContainer>
-      <LiveCountdown />
+      <Wrapper>
+        <LiveCountdown noBtn={true} />
+        <FooterBtn text="hello!" />
+      </Wrapper>
     </FooterContainer>
   );
 }

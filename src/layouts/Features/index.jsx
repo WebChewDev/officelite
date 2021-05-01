@@ -1,6 +1,6 @@
 import React from "react";
 import Cards from "../../components/Cards/index";
-import { FeaturesContainer, BgSvg } from "./FeaturesElements";
+import { FeaturesContainer } from "./FeaturesElements";
 import {
   heading,
   pricing,
@@ -22,6 +22,7 @@ function Features() {
         subtext_2={subtext2[0]}
         subtext_3={subtext3[0]}
         btn_text={btn}
+        buttonType="secondary"
       />
       <Cards
         heading={heading[1]}
@@ -31,6 +32,10 @@ function Features() {
         subtext_2={subtext2[1]}
         subtext_3={subtext3[1]}
         btn_text={btn}
+        buttonType="contrast"
+        subTextType ="dark"
+        pricingType ="dark"
+        headingType ="dark"
       />
       <Cards
         heading={heading[2]}
@@ -40,6 +45,7 @@ function Features() {
         subtext_2={subtext2[2]}
         subtext_3={subtext3[2]}
         btn_text={btn}
+        buttonType="secondary"
       />
     </FeaturesContainer>
   );

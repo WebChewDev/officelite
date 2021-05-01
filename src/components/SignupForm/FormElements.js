@@ -33,6 +33,7 @@ export const InputField = styled.input`
     font-weight: normal;
     font-size: 16px;
     line-height: 28px;
+    vertical-align: center;
   }
 `;
 //select
