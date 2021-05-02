@@ -8,7 +8,7 @@ export const HeaderContainer = styled.header`
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  min-height: 890px;
+  height: ${props => props.signup ? '890px' : '462px'};
   width: 375px;
   padding: 46px 24px 100px;
   background: url(${bg}) center -47% no-repeat;
