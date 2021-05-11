@@ -1,8 +1,7 @@
 import { Route } from "react-router-dom";
-import "./App.css";
 //pages
-import Home from "./pages/Home";
-import SignUp from "./pages/SignUp";
+import Home from "./views/pages/Home/index";
+import SignUp from "./views/pages/SignUp/index";
 
 function App() {
   return (
@@ -12,5 +11,4 @@ function App() {
     </div>
   );
 }
-
 export default App;

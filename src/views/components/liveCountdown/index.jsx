@@ -8,7 +8,7 @@ import {
   Cell,
   CellValue,
   CellText,
-} from "./LiveCountdownElements";
+} from "./styles";
 
 function LiveCountdown({ noBtn, dark }) {
   const [Seconds, setSeconds] = useState("");
@@ -19,18 +19,18 @@ function LiveCountdown({ noBtn, dark }) {
   const countDownDate = new Date("Jul 25, 2021 16:37:52").getTime();
 
   useEffect(() => {
-    setInterval(function () {
-      var now = new Date().getTime();
-      var timeLeft = countDownDate - now;
+    setInterval(() => {
+      const now = new Date().getTime();
+      const timeLeft = countDownDate - now;
 
-      var days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
-      var hours = Math.floor(
+      const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+      const hours = Math.floor(
         (timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
       );
-      var minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
-      var seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+      const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
 
-      //state
+      //update state
       setSeconds(seconds);
       setMinutes(minutes);
       setHours(hours);

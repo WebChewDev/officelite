@@ -2,7 +2,7 @@ import React from "react";
 import logo from "../../assets/shared/logo.svg";
 import heroImage from "../../assets/home/illustration-charts.svg";
 import { ButtonCta } from "../../components/Button/index";
-import { heading, subheading, cta_btn } from "./content";
+import { contents as ct } from "./content";
 
 import {
   HeaderContainer,
@@ -16,9 +16,9 @@ import {
   Anchor,
 } from "./HeaderElements";
 
-function Header({ image, btn }) {
+function Header({ image, btn, signup }) {
   return (
-    <HeaderContainer>
+    <HeaderContainer >
       <Logo to="/">
         <BrandLogo src={logo} />
       </Logo>
@@ -30,11 +30,11 @@ function Header({ image, btn }) {
       ) : null}
 
       <CallToAction>
-        <Heading>{heading}</Heading>
-        <SubText>{subheading}</SubText>
+        <Heading>{ct.heading}</Heading>
+        <SubText>{ct.subheading}</SubText>
 
         { btn? <Anchor to="/">
-          <ButtonCta text={cta_btn} />
+          <ButtonCta text={ct.cta_btn} />
         </Anchor> : null}
       </CallToAction>
     </HeaderContainer>

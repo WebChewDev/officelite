@@ -9,3 +9,4 @@ export const subtext1 = card.subtext_1;
 export const subtext2 = card.subtext_2;
 export const subtext3 = card.subtext_3;
 export const btn = card.btn;
+
